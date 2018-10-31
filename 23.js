@@ -15,10 +15,10 @@ for (var i = 0 ; i<=n ; i++){
 };
 for (var k = 0 ; k < xara.length; k++ ){
 	if(xara[k] >= 0){
-	yara[k]=Math.sin((xara[k])*dista/2);
+	yara[k]=koeff*Math.sin((xara[k])*dista/2);
 	}
 	else {
-	yara[k]=-Math.sin((xara[k]*dista)/2);
+	yara[k]=-koeff*Math.sin((xara[k]*dista)/2);
 	}
 	
 	
@@ -34,7 +34,7 @@ var myChart = new Chart(ctx, {
     data: {
         //labels: x,
         datasets: [{
-            label: '# of Votes',
+            label: 'Omega',
 			fill: true,
             data: points,
             backgroundColor: [
