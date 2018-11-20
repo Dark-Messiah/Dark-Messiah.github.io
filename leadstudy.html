@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Lead Study </title> 
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+	</head> 
+<body onload="startPlot()">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+<script type="text/javascript" src="leadeam.js"></script>
+<h1> Свинец </h1> 
+<button type="button" onclick="location.href='formsforcharts.html'"><h3>К предыдущему разделу</h3> </button>
+<br>
+<br>
+<br>
+<input type="text"style="font-size:25pt;" onchange="nniChanged()" placeholder= "Сколько соседей?" id="nni">
+<!--<a href="https://sci-hub.tw/10.1016/j.actamat.2018.09.036"><nobr> <h1>The Article!!!</h1></nobr></a> -->
+<canvas id="myChart" ></canvas>
+
+<canvas id="myChart1" ></canvas>
+
+<canvas id="myChart2" ></canvas>
+
+<canvas id="myChart3" ></canvas>
+
+<table id="myTable">
+  <tr>
+  <th width="10%">Соседи      </th>
+  <th width="30%">U(r) [Н*м]</th>
+   <th width="30%">dU(r)/dr [H]</th>
+    <th width="30%">d^2U(r)/dr^2</th>
+  
+  </tr>
+  
+</table>
+<br>
+
+<button type="button" onclick="createTable();this.style.visibility= 'hidden';"> <h1>Таблица значений в узлах</h1></button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+
+</body>
+</html>

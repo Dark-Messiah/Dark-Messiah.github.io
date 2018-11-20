@@ -2,45 +2,74 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title> CHHHAAARTs </title> 
-</head> 
+	<title> FormsForMyCharts</title> 
+
+	<link rel="stylesheet" type ="text/css" href="style.css"/>
+
+	</head> 
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
-<h1> Дисперсионные кривые v.0.0.3 </h1>
-<ul>
-<a href="graph1.html"> Study 1 period </a> <br>
-<a href="graph2.html"> Study 2 periods </a> <br>
-<a href="graph3.html"> Study 3 periods </a><br>
-<a href="graph4.html"> Study 4 periods </a><br>
-<a href="graph5.html"> Study 5 periods </a><br>
-<a href="graph10.html"> Study 10 periods </a><br>
-</ul>
-<!--
-<form>
-  <input type="radio" id="rb1" onclick="checkIt();"
-                   name="rb1" value="1" />  Study 1 period <br>
-				  
-  <input type="radio" id="rb1" onclick="checkIt();"
-                   name="rb1" value="2"  /> Study 2 periods <br>
- <input type="radio" id="rb3" onclick="checkIt();"
-                   name="rb1" value="3" />  Study 3 periods <br>
- <input type="radio" id="rb4" onclick="checkIt();"
-                   name="rb1" value="4"  />  Study 4 periods <br>
-  <input type="radio" id="rb5" onclick="checkIt();"
-                   name="rb1" value="5" />  Study 5 periods <br>
-<input type="radio" id="rb6" onclick="checkIt();"
-                   name="rb1" value="10" />  Study 10 periods <br>
-				   
-				   
-				   
-</form>
--->
-<!--<canvas id="myChart" width="200" height="100"></canvas>
+<script type="text/javascript" src="newapproach.js"></script>
+<h1> 1D Дисперсионные Кривые </h1>
+<h2> Рассмотрение только для ближайших соседей</h2>
 
-<script src="23.js"></script>
+<!--<button type="button" onclick="location.href='leadstudy.html'"><h1>Подробнее для свинца</h1> </button> -->
+<a href='leadstudy.html' > <h3>Подробнее для свинца</h3></a>
 
--->
+</ul> 
+<div style="background-color: red" id="mFlag"><p>|<br>|</p></div>
+<input type="radio" name="material" id="Lead" value="lead" onclick="rbChange()">
+<label for="Lead">Свинец</label>
+<input type="radio" name="material" id="Sodium" onclick="rbChange()"value="sodium">
+<label for="Lead">Натрий</label>
+<input type="radio" name="material" id="Aluminum"onclick="rbChange()" value="aluminum">
+<label for="Lead">Алюминий</label>
+<input type="radio" name="material" id="Silicon"onclick="rbChange()" value="silicon">
+<label for="Lead">Кремний</label>
+<input type="radio" name="material" id="Germanium"onclick="rbChange()" value="germanium">
+<label for="Lead">Германий</label>
+<input type="radio" name="material" id="Copper"onclick="rbChange()" value="copper">
+<label for="Lead">Медь</label>
+<br> 
+<br>
+<!--<a href="https://www.degruyter.com/downloadpdf/j/pac.2016.88.issue-3/pac-2015-0305/pac-2015-0305.pdf">________________________Атомные_Веса________________________</a>
+<br>
 
+<!--<div <div style="background-color: red" id="nFlag" ><p>|<br>|		</p></div>
+
+<input type="text" onchange="nChanged()" placeholder="Сколько соседей?[вработе]" id="n"> -->
+<br>
+<div <div style="background-color: red" id="npFlag" ><p>|<br>|		</p></div>
+<br>
+<input type="text" onchange="npChanged()" placeholder="Сколько точек?" id="np">
+
+
+<div>
+<!--<canvas id="myChart" width="200" height="100"></canvas> -->
+<canvas id="myChart" >
+</div>
+
+
+<div style="background-color:lightblue" id="test1">
+  <h3>Ваш Выбор: n/a</h3>
+</div>
+<div style="background-color:#dcd4f4" id="ndist">
+  <h3>Расстояние до ближайшего соседа: n/a </h3>
+</div>
+<!--<div style="background-color:#fdffcc" id="nn">
+  <h3>Учёт количества соседей:  n/a </h3> -->
+</div>
+<div style="background-color:#fce3ee" id="yung">
+  <h3>Объёмный модуль упругости: n/a </h3>
+</div>
+<div style="background-color:#ecffe5" id="ama">
+  <h3>Атомная масса: n/a </h3>
+</div>
+<div style="background-color:#d6fffc" id="nnp">
+  <h3>Точек на графике:  n/a </h3>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
 
 </body>
 </html>
